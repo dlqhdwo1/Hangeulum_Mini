@@ -340,4 +340,11 @@ public class UserController {
 		  }
 		  
 		  
+		  @PostMapping(value="mypage_view")
+		  @ResponseBody
+		  public List<UserDTO> mypage_view(@RequestParam String userId) {
+			  return userService.mypage_view(userId);
+		  }
+		  
+		  
 }

@@ -10,7 +10,7 @@ $(function() {
   } else {
     $("#boardFIsExpired").val("N");
   }
-
+  //.
   // 종료일이 변경될 때마다 종료여부를 업데이트
   $("#boardFExpireDate").change(function() {
     endDate = new Date($(this).val());

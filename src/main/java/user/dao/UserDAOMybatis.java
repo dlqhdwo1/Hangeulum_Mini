@@ -204,6 +204,12 @@ public class UserDAOMybatis implements UserDAO {
 		
 		return sqlsession.selectList("userSQL.card_list_funding");
 	}
+
+	@Override
+	public List<UserDTO> mypage_view(String userId) {
+		
+		return sqlsession.selectList("userSQL.mypage_view",userId);
+	}
 	
 	
 	

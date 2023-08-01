@@ -175,6 +175,14 @@ public class UserServiceImpl implements UserService {
 
 
 
+	@Override
+	public List<UserDTO> mypage_view(String userId) {
+		
+		return userDAO.mypage_view(userId);
+	}
+
+
+
 
 
 }

@@ -616,13 +616,16 @@ div .price {
                 <li><a href="">고객센터</a></li>
             </ul>
         </div>
+        
+        <input type="hidden" id="userId" value="${userid}"/>
     
         <div class="header-r">
+        
             <a href="/Hangeulum/user/loginForm" class="login_btn">${userid}</a>
             <span class="header-bar"></span>
             <a href="#" class="search_btn">
-                <img class="profile_img" src="profile_img" alt="enlargement.png">
-            </a>
+                <img class="profile_img" src="${kakao_profile}" alt="enlargement.png">
+            </a> 
         </div>
         </div>
     </div>
@@ -637,12 +640,11 @@ div .price {
     <!-- navi bar-->
     <div class="mymenu_bar">
         <div class="my_profile_wrap">
-            <a href="/Hangeulum/user/profileuploadForm"><img width="50" height="50" src="/Hangeulum/user/profileupload" class="profile_img" alt="유저 프로필 사진"></a>
+            <a href="/Hangeulum/user/profileuploadForm"><img width="50" height="50" src="${kakao_profile}" class="profile_img" alt="유저 프로필 사진"></a>
             <a href="/Hangeulum/user/uploadForm"></a>
             <div class="profile_nickname">
-                <span class="levelname">bitcamp3</span>
+                <span class="levelname">${userid}</span>
                 <div class="userClass"></div>
-                
             </div>
         </div>
         <div class="mymenu">
@@ -818,6 +820,7 @@ div .price {
     
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+	
 	<script type="text/javascript" src="/Hangeulum/js/mypage.js"></script>
 	
 	

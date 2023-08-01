@@ -56,6 +56,8 @@ public interface UserDAO {
 	public List<BoardDDTO> card_list();
 
 	public List<BoardFDTO> card_list_funding();
+
+	public List<UserDTO> mypage_view(String userId);
 	
 	
 	

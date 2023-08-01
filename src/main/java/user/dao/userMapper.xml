@@ -92,6 +92,10 @@
 	</select>
 	
 	
+	<select id="mypage_view" parameterType="String" resultType="user">
+		select * from userinfo where userid=#{userId}
+	</select>
+	
 
 
  

@@ -53,6 +53,8 @@ public interface UserService {
 
 	public List<BoardFDTO> card_list_funding();
 
+	public List<UserDTO> mypage_view(String userId);
+
 
 	
 //
