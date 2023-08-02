@@ -279,9 +279,11 @@ public class UserController {
 	
 	
 	  @PostMapping(value="update")
-	  
 	  @ResponseBody public void update(@ModelAttribute UserDTO userDTO){
-	  userService.update(userDTO); }
+		  
+	  userService.update(userDTO); 
+	  
+	  }
 	 	
 	@GetMapping(value="deleteForm")
 	public String deleteForm() {

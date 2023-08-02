@@ -108,7 +108,9 @@ public class UserDAOMybatis implements UserDAO {
 
 	@Override
 	public void changepassword(Map<String, String> map) {
+
 		sqlsession.update("userSQL.changepassword",map);
+
 		System.out.println("업데이트완료!!");
 	}
 	
@@ -143,6 +145,25 @@ public class UserDAOMybatis implements UserDAO {
 	@Override
 	public void update(UserDTO userDTO) {
 		System.out.println(userDTO.getUserid());
+		
+		String password = userDTO.getUserpassword();
+		System.out.println("유저 수정 패스워드 들어오나? " + password);
+		
+		 AES256 aes256 = new AES256();
+	       
+	        String cipherText=null;
+			try {
+				cipherText = aes256.encrypt(password);
+				System.out.println(aes256.decrypt(cipherText));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	        System.out.println(password);
+	        System.out.println("cipherText(encrypt):"+cipherText);
+	        
+	        userDTO.setUserpassword(cipherText);
+		
+		
 		sqlsession.update("userSQL.update", userDTO);
 		//System.out.println("업데이트완료");
 		

@@ -19,6 +19,8 @@ $(function(){
 // 회원정보수정 완료
 $('#btn_update').click(function(){ //회원정보수정 버튼 클릭하면
 
+	
+
 	$('#nameDiv').empty();
 	$('#pwdDiv').empty();
 	$('#phoneDiv').empty();
