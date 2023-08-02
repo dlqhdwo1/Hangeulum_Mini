@@ -302,7 +302,7 @@ public class UserController {
 
 	    @GetMapping(value="deleterepwd")
 	    public String deleterepwd() {
-	    	
+ 	
 	    	return "user/deleteRepwd";
 	    }
 	
@@ -316,6 +316,9 @@ public class UserController {
 		  @PostMapping(value="deleteFinal")
 		  @ResponseBody
 		  public void deleteFinal(@RequestParam Map<String, Object> map){
+			  
+			  System.out.println("회원탈퇴인데 아이디 들어오냐?"+map.get("userid"));
+			  
 			  userService.deleteFinal(map);
 	    
 		  }

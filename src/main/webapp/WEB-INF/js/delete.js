@@ -1,6 +1,7 @@
 
 // 약관동의 페이지에서 탈퇴 버튼 누를 경우
 $('#btn_submit').click(function(){
+
 	if($('#chkbox').is(":checked") == false ) {
 		alert('회원탈퇴 안내 및 유의사항을 확인해주세요');
 		}else{
@@ -10,6 +11,8 @@ $('#btn_submit').click(function(){
 
 
 $('#chkBtn').click(function(){ //비밀번호 재입력 창에서 '확인' 버튼 클릭할 경우
+	 
+	 
 	 
 	$('#userpassword').empty();
 	$('#userpassword2').empty();

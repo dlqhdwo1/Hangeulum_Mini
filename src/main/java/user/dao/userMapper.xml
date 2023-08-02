@@ -63,7 +63,7 @@
     </select>
     
  	<delete id="deleteFinal" parameterType="java.util.Map">
-  		delete from userinfo where userid=#{userid} and userpassword=#{userpassword}
+  		delete from userinfo where userid=#{userid}
     </delete>
     
     <select id="fundingactive" resultType="String">
