@@ -152,13 +152,13 @@
 		<div class="container">
 		<p><a href="#">소셜벤처를 먼저 만나는 펀딩></a></p>
 		</div>
+		</div>
 		
-	
-	
+
 	<!-- test -->
 		 <div class="container text-center">
-		 <div class="fundingtext">
-		<div class="row">
+		 <div class="funding">
+		 <div class="row">
 	
           <!-- *************************  -->
          
@@ -167,7 +167,7 @@
                
           </div>
           </div>
-</div>
+
 
 	<br><br>
       <!-- Grid end  -->

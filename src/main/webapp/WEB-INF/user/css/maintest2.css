@@ -411,7 +411,17 @@ div.header-r > a.search_btn > img{
 	
 }
 
+.card{
+	border-radius : 10px 10px 10px 10px;
+}
+
+.card > img{
+	border-radius : 10px 10px 10px 10px;
+}
+
+
 .card-text {
+  height:20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -427,11 +437,16 @@ div.header-r > a.search_btn > img{
   display: none; /* 이미지 요소 숨김 처리 */
 }
 
-
+.card-title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .card-body{
 	padding: 21px 20px 0;
-	height:500px;
+	height:200px;
+	border-radius : 50px;
 }
 
 .card-body > a {
