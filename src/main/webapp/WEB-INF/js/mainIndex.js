@@ -51,8 +51,7 @@ $(function(){
       url:'/Hangeulum/user/card_list',
       
       success:function(data){
-      
-      console.log(JSON.stringify(data));
+      	console.log(JSON.stringify(data));
            
       $.each(data, function(index, items){
           console.log(items.bdSeq);
@@ -64,14 +63,16 @@ $(function(){
   "<img src='/Hangeulum/storage/" + items.fileName + "'  width='287px' height='200px'> " +
   "<div class='card-body'>" +
   "<a href='/Hangeulum/donation/donation_view?bdseq=" + items.bdSeq + "'><h5 class='card-title'>" + items.bdSubject + "</h5></a>" +
-"<div class='card-text' style='display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;'>"+items.bdContent+"</div>" +
+  "<div class='card-text' style='display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;'>"+items.bdContent+"</div>" +
 
   "<div class='progress' aria-label='모금률'>" +
   "<span class='progress_bar' style='width: 80%;'></span>" +
   "</div>" +
 
+ 
+
   "<strong class='donation_percent'>" +
-  "80%" +
+  "모금률   80%" +
   "</strong>" +
   "<strong class='donationcard_text'>" +
   "</strong>" +
@@ -118,6 +119,7 @@ $('.donation .row').append(html);
       
       success:function(data){
  
+ 		 console.log(JSON.stringify(data));
          
       $.each(data, function(index, items){
         
@@ -127,7 +129,7 @@ $('.donation .row').append(html);
          html =
   "<div class='col-md-4 col-sm-6'>" +
   "<div class='card' style='width: 18rem;'>" +
-  "<img src='https://t1.kakaocdn.net/friends/prod/product/20230307100106001_8809922502072_AW_00.jpg' height='100px'>" +
+  "<img src='/Hangeulum/storage/" + items.fileName + "'  width='287px' height='200px'> " +
   "<div class='card-body'>" +
   "<a href='/Hangeulum/funding/fun_view/" + items.boardFSeq + "'><h5 class='card-title'>" + items.boardFSubject + "</h5></a>" +
   "<div class='card-text' style='display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;'>"+items.boardFContent+"</div>" +
@@ -137,7 +139,7 @@ $('.donation .row').append(html);
   "</div>" +
 
   "<strong class='donation_percent'>" +
-  "80%" +
+  "모금률   80%" +
   "</strong>" +
 
   "<strong class='donationcard_text'>" +
